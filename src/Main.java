@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,5 +28,24 @@ public class Main {
 
         for (Map.Entry<Integer, String> entry : itemHashMap.entrySet())
             System.out.printf("%d, %s\n", entry.getKey(), entry.getValue());
+
+        // Zadanie 3
+
+        Item i6 = new Item(6, "Item6");
+        Item i7 = new Item(7, "Item7");
+        Item i8 = new Item(8, "Item8");
+        Item i9 = new Item(9, "Item9");
+        Item i10 = new Item(10, "Item10");
+
+        items.add(i6);
+        items.add(i7);
+        items.add(i8);
+        items.add(i9);
+        items.add(i10);
+
+        List<Item> itemSubList = items.subList(0, 4);
+        HashSet<Item> itemHashSet = new HashSet<>();
+        for (Item o : itemSubList)
+            itemHashSet.add(o);
     }
 }
